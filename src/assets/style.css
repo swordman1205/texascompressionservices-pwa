@@ -1,0 +1,24 @@
+/**
+ * Theme Name: Texas Compression Services
+ * Author: Marion
+ * Version: 1.0
+**/
+
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+
+    .contact-form .address_country {
+        margin-top: -3px;
+    }
+
+    .contact-form .address_country select {
+        padding: 0 4px !important;
+        line-height: 1.2 !important;
+    }
+
+    .contact-form .address_country label {
+        margin-top: -3px;
+    }
+}}
+

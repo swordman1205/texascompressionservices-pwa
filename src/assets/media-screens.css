@@ -1,0 +1,239 @@
+/*-=Tablet screens=-*/
+@media only screen and (max-width: 1024px) {
+  /*max-width 1024px, tablet screens*/
+  /* TOP BAR Mobile STYLING */
+  .title-bar {
+    background-color: transparent;
+    text-align: right;
+    padding: 0;
+    line-height: 1;
+  }
+  .title-bar .title-bar-title {
+    vertical-align: top;
+  }
+  .title-bar .menu-icon {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    width: 20px;
+    height: 25px;
+    background-color: transparent;
+    vertical-align: top;
+    cursor: pointer;
+    outline: none;
+  }
+  .title-bar .menu-icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fefefe;
+    top: 50%;
+    left: 0;
+    margin-top: -9px;
+    box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe;
+  }
+
+  .top-bar {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    display: none;
+    height: auto;
+    padding: 0;
+    z-index: 1000;
+  }
+  .top-bar ul {
+    background: transparent;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+  .top-bar ul li > a {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    /* menu item text color */
+    font-size: 14px;
+    background: #2f353b;
+    /* menu item background color */
+    line-height: 45px;
+    padding: 0 15px;
+  }
+  .top-bar ul li > a:hover {
+    background: #24282d !important;
+    /* menu item background color on hover */
+  }
+  .top-bar ul li.current-menu-item > a, .top-bar ul li.current_page_ancestor > a {
+    background: #3a4249 !important;
+    /* current/parent menu item background color */
+  }
+  .top-bar ul li.has-dropdown a:after {
+    display: none;
+  }
+  .top-bar ul li.has-dropdown .accordion-toggle {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    right: 0;
+    top: 0;
+    color: #fff;
+    /* dropdown arrow color */
+    z-index: 100;
+    text-align: center;
+  }
+  .top-bar ul li.has-dropdown .accordion-toggle i.fa {
+    font-size: 13px;
+    line-height: 1;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .top-bar ul li[aria-expanded="true"] > a {
+    background: #282d32;
+    /* menu item background color on open dropdown */
+  }
+  .top-bar ul li[aria-expanded="true"] > a .accordion-toggle i.fa {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .top-bar ul li .submenu a {
+    padding-left: 25px;
+  }
+}
+/*-=Small screens=-*/
+@media only screen and (max-width: 640px) {
+  .alignright, .alignleft, .aligncenter, .alignnone {
+    float: none;
+    margin: 0 0 1em;
+  }
+}
+/* max-width 640px and lower. Use this for mobiles only */
+/*-=Medium screens=-*/
+/* min-width 641px */
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+}
+/*-=Large screens=-*/
+@media only screen and (min-width: 1025px) {
+  /*min-width 1025px, large screens*/
+  /* TOP BAR STYLING */
+  .title-bar {
+    display: none;
+  }
+
+  .top-bar {
+    padding: 0;
+    background-color: transparent;
+    /* Dropdown item styling */
+  }
+  .top-bar ul {
+    background: transparent;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar .header-menu li {
+    float: left;
+    background-color: transparent;
+    margin-right: 15px;
+  }
+  .top-bar .header-menu li:last-child {
+    margin-right: 0;
+  }
+  .top-bar .header-menu li > a {
+    /* Regular menu item style */
+    display: block;
+    background: transparent;
+    font-size: 15px;
+    line-height: 1;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: 110px;
+    text-align: center;
+  }
+  .top-bar .header-menu li.current-menu-item > a, .top-bar .header-menu li.current_page_ancestor > a, .top-bar .header-menu li.current_page_parent > a {
+    /* Style of Current page and Ancestor page */
+    background: transparent;
+    color: #d73347;
+  }
+  .top-bar .header-menu li.has-dropdown > a {
+    /* Style of item with dropdown */
+    padding: 0 15px;
+  }
+  .top-bar .header-menu li.has-dropdown > a:after {
+    /* Hide dropdown arrow */
+    display: none !important;
+  }
+  .top-bar .header-menu li.has-dropdown > a:hover {
+    /* Hover state for dropdown link */
+  }
+  .top-bar .header-menu li > a:hover {
+    /* menu item style on hover */
+    background: transparent;
+    color: #d73347;
+  }
+  .top-bar .header-menu:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .top-bar ul li:hover > a {
+    /* Parent link style on dropdown hover */
+    background: #d0cac4;
+    color: #2f353b;
+  }
+  .top-bar .submenu {
+    display: none;
+    border: none;
+  }
+  .top-bar .submenu.js-dropdown-active {
+    display: block;
+  }
+  .top-bar .submenu li {
+    display: block;
+  }
+  .top-bar .submenu li > a {
+    /* Regular link in dropdown */
+    background: #d0cac4;
+    color: #2f353b;
+  }
+  .top-bar .submenu li > a:hover {
+    /* Dropdown link on hover */
+    background: #464f57;
+    color: white;
+  }
+  .top-bar .is-dropdown-submenu .is-dropdown-submenu {
+    margin-top: 0;
+  }
+  .top-bar .is-dropdown-submenu .is-dropdown-submenu li a {
+    /* Styles for 2nd level dropdown menu link */
+  }
+
+  /* Align Menu to the right
+  	 .top-bar .header-menu { float:right; }*/
+  /* Align Menu to the center
+  	 .top-bar .header-menu { text-align: center; }
+  	 .top-bar .header-menu > li{ float: none; display: inline-block; } */
+}
+@media only screen and (min-width: 1201px) {
+  /* min-width 1201px, large screens*/
+}
+@media only screen and (min-width: 1201px) and (max-width: 1280px) {
+  /* min-width 1201px and max-width 1280px, use when QAing MacBook issues */
+}
